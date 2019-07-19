@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>API</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="assets/css/mystyle.css">
+</head>
+<body>
+	<div id="frame">
+		<div id="myLocation">
+			<ul>
+				  <li><label class="location" id="ip">IP:</label></li>
+				  <li><label class="location" id="city">STAD:</label></li>
+				  <li><label class="location" id="region">REGIO:</label></li>
+				  <li><label class="location" id="country">LAND:</label></li>
+				  <li><label class="location" id="continent">CONTINENT:</label></li>
+				  <li><label class="location" id="postal">POSTCODE:</label></li>
+			</ul>  
+		</div>
+		<div id="weatherInfo">
+			<ul>
+				  <li><label class="weather" id="temp">TEMPERATUUR:</label></li>
+				  <li><label class="weather" id="humidity">LUCHTVOCHTIGHEID:</label></li>
+				  <li><label class="weather" id="wind">WINDSNELHEID:</label></li>
+			</ul>  
+		</div>
+		<hr>
+		<div id="countryList">
+			<table id="landen">
+				<tr>
+					<th>
+						Land
+					</th>
+					<th>
+						Hoofdstad
+					</th>
+					<th>
+						Overheid
+					</th>
+					<th>
+				</tr>
+			</table>
+		</div>
+	</div>
+		
+	<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  		<div class="modal-content">
+		    <span class="close">&times;</span>  
+		    <form id="wijzigen" method="POST">
+		    	Code:      <input type="text" name="code" id="code" readonly><br>
+		    	Land:      <input type="text" name="land" id="land"><br>
+		    	Hoofdstad: <input type="text" name="hoofdstad" id="hoofdstad"><br>
+		    	Surface:   <input type="number" name="surface" id="surface"><br>
+		       	Populatie: <input type="number" name="populatie" id="populatie"><br>
+		    	
+		    	<button type="button" id="submit">Submit</button>
+</form>
+</div>
+		    			<div id="form">
+			<h1>Land toevoegen</h1>
+			<form id="toevoegen" method="POST">
+		    	Code:      <input type="text" name="code" ><br>
+		    	Land:      <input type="text" name="land" ><br>		    	
+		    	Hoofdstad: <input type="text" name="hoofdstad" ><br>
+		    	Surface:   <input type="number" name="surface" ><br>
+		       	Populatie: <input type="number" name="populatie" ><br>
+		    	<button type="button" id="submit_toevoegen">Submit</button>
+		    </form>
+	  	
+	</div>
+	  	</div>
+</body>
+	<script src="assets/js/script.js"></script>
+	<script>initPage();</script>
+</html>

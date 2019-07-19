@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="assets/css/mystyle.css">
+	</head>
+
+	<body>
+		<div id=logo-containter><center><a href="boatList.html">Boten</a><img src="https://jpcoen.nl/images/logo.png" class="logo"></img><a id="logout_button" href="index.html">Uitloggen</a></center></div>
+		<div id="background">
+			<center>
+				<div id="users"></div>
+				<div id="usersApprove">
+				<h1>Leden accepteren:</h1>
+				</div>
+			</center>
+		</div>
+		<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  		<div class="modal-content">
+		    <span class="close">&times;</span>  
+		    <form id="wijzigen" method="POST">
+			    <table>
+			    	<tr><td>Voornaam:</td><td><input type="text" name="voornaam" id="voornaam"></td></tr>
+			    	<tr><td>Tussenvoegsel:</td><td><input type="text" name="tussenvoegsel" id="tussenvoegsel"></td></tr>
+			    	<tr><td>Achternaam:</td><td><input type="text" name="achternaam" id="achternaam"></td></tr>
+			    	<tr><td>Email:</td><td><input type="text" name="email" id="email"></td></tr>
+			    	<tr><td>Telnr.:</td><td><input type="number" name="telefoon" id="telefoon"></td></tr>
+			    	<tr><td>Boot Nr.:</td><td><input type="number" name="boot_nummer" id="boot_nummer"></td></tr>
+			    	<tr><td>Rol:</td><td><input type="text" name="onderhoud" id="onderhoud"></td></tr>
+			    	<tr><td><button type="button" id="submit">Submit</button></td></tr>
+				</table>
+			</form>
+		</div>
+		</div>
+		<script src="assets/js/script.js"></script>
+		<script>
+		initUserList();
+		</script>
+	</body>
+</html>
+
+			    	<!-- <tr><td>Zwaard</td><td><input type="text" name="Zwaard" id="Zwaard"></td></tr>
+			    	<tr><td>Roer</td><td><input type="text" name="Roer" id="Roer"></td></tr>	    	
+			    	<tr><td>Mast</td><td><input type="text" name="Mast" id="Mast"></td></tr>
+					<tr><td>Giek</td><td><input type="text" name="Giek" id="Giek"></td></tr>
+					<tr><td>Gaffel</td><td><input type="text" name="Gaffel" id="Gaffel"></td></tr>
+					<tr><td>Grootzeil</td><td><input type="text" name="Grootzeil" id="Grootzeil"></td></tr>
+					<tr><td>Fok</td><td><input type="text" name="Fok" id="Fok"></td></tr>
+					<tr><td>Vallen</td><td><input type="text" name="Vallen" id="Vallen"></td></tr>
+					<tr><td>Doften</td><td><input type="text" name="Doften" id="Doften"></td></tr>
+					<tr><td>Vlonders</td><td><input type="text" name="Vlonders" id="Vlonders"></td></tr>
+					<tr><td>Wrikriem</td><td><input type="text" name="Wrikriem" id="Wrikriem"></td></tr>
+					<tr><td>Roeiriem</td><td><input type="text" name="Roeiriem" id="Roeiriem"></td></tr>
+					<tr><td>Dollen</td><td><input type="text" name="Dollen" id="Dollen"></td></tr> -->

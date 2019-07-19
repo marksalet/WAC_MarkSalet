@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="assets/css/mystyle.css">
+	</head>
+
+	<body>
+		<div id=logo-containter><center><a href="userList.html">Gebruikers</a><img src="https://jpcoen.nl/images/logo.png" class="logo"></img><a id="logout_button" href="index.html">Uitloggen</a></center></div>
+		<div id="background">
+			<center>
+				<div id="boten">
+				<button id="addButton">Toevoegen</button>
+				</div>
+			</center>
+		</div>
+		<div id="modalOnderdelen" class="modalOnderdelen">
+
+  <!-- Modal content -->
+  		<div class="modal-content">
+		    <span class="close closeOnderdelen">&times;</span>  
+		    <form id="onderdelen" method="POST">
+			    <table>
+			    	<tr><td>Boot nummer:</td><td><input type="number" name="Nummer" id="nummerOnderdelen" readonly></td></tr>
+			    	<tr><td>Zwaard</td><td><input type="text" name="Zwaard" id="Zwaard"></td></tr>
+			    	<tr><td>Roer</td><td><input type="text" name="Roer" id="Roer"></td></tr>	    	
+			    	<tr><td>Mast</td><td><input type="text" name="Mast" id="Mast"></td></tr>
+					<tr><td>Giek</td><td><input type="text" name="Giek" id="Giek"></td></tr>
+					<tr><td>Gaffel</td><td><input type="text" name="Gaffel" id="Gaffel"></td></tr>
+					<tr><td>Grootzeil</td><td><input type="text" name="Grootzeil" id="Grootzeil"></td></tr>
+					<tr><td>Fok</td><td><input type="text" name="Fok" id="Fok"></td></tr>
+					<tr><td>Vallen</td><td><input type="text" name="Vallen" id="Vallen"></td></tr>
+					<tr><td>Doften</td><td><input type="text" name="Doften" id="Doften"></td></tr>
+					<tr><td>Vlonders</td><td><input type="text" name="Vlonders" id="Vlonders"></td></tr>
+					<tr><td>Wrikriem</td><td><input type="text" name="Wrikriem" id="Wrikriem"></td></tr>
+					<tr><td>Roeiriem</td><td><input type="text" name="Roeiriem" id="Roeiriem"></td></tr>
+					<tr><td>Dollen</td><td><input type="text" name="Dollen" id="Dollen"></td></tr>
+					<tr><td><button type="button" id="submit_onderdelen">Opslaan</button></td></tr>
+				</table>
+			</form>
+		</div>
+		</div>
+		<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  		<div class="modal-content">
+		    <span class="close">&times;</span>  
+		    <form id="wijzigen" method="POST">
+			    <table>
+			    	<tr><td>Nummer:</td><td><input type="text" name="nummer" id="nummerModal" readonly></td></tr>
+			    	<tr><td>Naam:</td><td><input type="text" name="naam" id="naam"></td></tr>
+			    	<tr><td>Lengte:</td><td><input type="number" name="lengte" id="lengte"></td></tr>
+			    	<tr><td>Breedte:</td><td><input type="number" name="breedte" id="breedte"></td></tr>
+			    	<tr><td>Hoogte:</td><td><input type="number" name="hoogte" id="hoogte"></td></tr>
+			    	<tr><td>Diepgang:</td><td><input type="number" name="diepgang" id="diepgang"></td></tr>
+			    	<tr><td>Onderhoud:</td><td><input type="text" name="onderhoud" id="onderhoud"></td></tr>
+			    	<tr><td><button type="button" id="submit">Opslaan</button></td></tr>
+				</table>
+			</form>
+		</div>
+		</div>
+		<div id="modalAdd" class="modalAdd">
+		<div id="form" class="modal-content">
+		<span class="close closeAdd">&times;</span>
+				<h1>Boot toevoegen</h1>
+				<form id="toevoegen" method="POST">
+				<table>
+			    	<tr><td>Nummer:</td><td><input type="number" name="addNummer" id="addNummer"></td></tr>
+			    	<tr><td>Naam:</td><td><input type="text" name="addNaam" id="addNaam"></td></tr>
+			    	<tr><td>Lengte:</td><td><input type="number" name="addBreedte" id="addLengte"></td></tr>
+			    	<tr><td>Breedte:</td><td><input type="number" name="addBreedte" id="addBreedte"></td></tr>
+			    	<tr><td>Hoogte:</td><td><input type="number" name="addHoogte" id="addHoogte"></td></tr>
+			    	<tr><td>Diepgang:</td><td><input type="number" name="addDiepgang" id="addDiepgang"></td></tr>
+			    	<tr><td>Onderhoud:</td><td><input type="text" name="addOnderhoud" id="addOnderhoud"></td></tr>
+			    	<tr><td><button type="button" id="submit_toevoegen">Opslaan</button></td></tr>
+			    </table>
+			    </form>
+			</div>
+		</div>
+		<script src="assets/js/script.js"></script>
+		<script>
+			initBoatList();
+		</script>
+	</body>
+</html>

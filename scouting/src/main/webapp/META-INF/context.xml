@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context>
+	<Resource name="jdbc/PostgresDS"
+		driverClassName="org.postgresql.Driver" auth="Container"
+		type="javax.sql.DataSource" username="postgres" url="jdbc:postgresql://localhost:5432/hu_ipass" password="root"/>
+</Context>
