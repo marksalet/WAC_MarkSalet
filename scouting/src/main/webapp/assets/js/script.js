@@ -201,9 +201,10 @@ function updateBoat(){
 	var formData = new FormData(document.querySelector("#wijzigen"));
 	var encData = new URLSearchParams(formData.entries());
 	
-	fetch("/scouting/restservices/boatlist/" + nummer, {method: 'PUT', body: encData, headers : {	'Authorization': 'Bearer ' + window.sessionStorage.getItem("sessionToken") }})
+	fetch("/scouting/restservices/boatlist/update/" + nummer, {method: 'PUT', body: encData, headers : {	'Authorization': 'Bearer ' + window.sessionStorage.getItem("sessionToken") }})
 	.then((myJson) => {
 		console.log(myJson);
+		//location.reload();
 	});
 	
 	modal.style.display = "none";

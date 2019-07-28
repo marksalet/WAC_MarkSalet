@@ -38,7 +38,7 @@ public class BoatList {
 	}
 	@PUT
 	@RolesAllowed("Leiding")
-	@Path("{nummer}")
+	@Path("/update/{nummer}")
 	public Response update(@PathParam("nummer") int Nummer, @FormParam("naam") String Naam, @FormParam("lengte") int Lengte, @FormParam("breedte") int Breedte, @FormParam("hoogte") int Hoogte, @FormParam("diepgang") int Diepgang, @FormParam("onderhoud") boolean Onderhoud) {
 		System.out.println("------------------");
 		System.out.println(Naam);

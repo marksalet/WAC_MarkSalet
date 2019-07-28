@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>API</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="assets/css/mystyle.css">
+</head>
+<body>
+	<div id="frame">
+		<h1>Mijn locatie</h1>
+		<div id="myLocation">
+			<table>
+				<tr><td>Landcode:</td><td class="location" id="country"></td></tr>
+				<tr><td>Regio:</td><td class="location" id="region"></td></tr>
+				<tr><td>Stad:</td><td class="location" id="city"></td></tr>
+				<tr><td>Postcode:</td><td class="location" id="postal"></td></tr>
+				<tr><td>Latitude:</td><td class="location" id="lat"></td></tr>
+				<tr><td>Longitude:</td><td class="location" id="long"></td></tr>
+				<tr><td>IP:</td><td class="location" id="ip"></td></tr>
+			</table>  
+		</div>
+		<div id="weatherInfo">
+			<h1>Het weer in Utrecht</h1>
+			<table>
+				  <tr><td>Tempratuur:</td><td class="weather" id="temp"></td></tr>
+				  <tr><td>Luchtvochtigheid:</td><td class="weather" id="humidity"></td></tr>
+				  <tr><td>Windsnelheid:</td><td class="weather" id="wind"></td></tr>
+				  <tr><td>Windrichting:</td><td class="weather" id="winddirection"></td></tr>
+				  <tr><td>Zonsopgang:</td><td class="weather" id="sunup"></td></tr>
+				  <tr><td>Zonsondergang:</td><td class="weather" id="sundown"></td></tr>
+			</table>  
+		</div>
+		<h1>Beschikbare vakantiebestemmingen</h1>
+		<div id="countryList">
+			<table id="landen">
+				<tr>
+					<th>
+						Land
+					</th>
+					<th>
+						Hoofdstad
+					</th>
+					<th>
+						Overheid
+					</th>
+					<th>
+						Opervlakte
+					</th>
+					<th>
+						Inwoners
+					</th>
+					<th></th>
+					<th><button id="add">Toevoegen</button></th>
+				</tr>
+			</table>
+		</div>
+	</div>
+		
+	<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  		<div class="modal-content">
+		    <span class="close">&times;</span>  
+		    <form id="wijzigen" method="POST">
+		    	Code:      <input type="text" name="code" id="code" readonly><br>
+		    	Land:      <input type="text" name="land" id="land"><br>
+		    	Hoofdstad: <input type="text" name="hoofdstad" id="hoofdstad"><br>
+		    	Surface:   <input type="number" name="surface" id="surface"><br>
+		       	Populatie: <input type="number" name="populatie" id="populatie"><br>
+		    	
+		    	<button type="button" id="submit">Submit</button>
+			</form>
+		</div>
+	 </div>
+	 <div id="myModalAdd" class="modal">
+
+  <!-- Modal content -->
+  		<div class="modal-content">
+  		<span class="closeAdd">&times;</span> 
+	 <h2>Land toevoegen</h2	>
+			<form id="toevoegen" method="POST">
+		    	Code:      <input type="text" name="code" ><br>
+		    	Land:      <input type="text" name="land" ><br>		    	
+		    	Hoofdstad: <input type="text" name="hoofdstad" ><br>
+		    	Surface:   <input type="number" name="surface" ><br>
+		       	Populatie: <input type="number" name="populatie" ><br>
+		    	<button type="button" id="submit_toevoegen">Submit</button>
+		    </form>
+		    </div>
+	 </div>
+</body>
+	<script src="assets/js/script.js"></script>
+	<script>initPage();</script>
+</html>

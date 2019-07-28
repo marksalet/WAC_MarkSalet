@@ -1,7 +1,0 @@
-INDEX VERSION 1.4+C:\Users\marks\eclipse-workspace\WAC-master\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
-2284970733.index
-1067094681.index
-3592901720.index
-4051565287.index
-210828108.index
-2484369034.index

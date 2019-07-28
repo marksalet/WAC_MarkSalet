@@ -13,49 +13,36 @@ import javax.servlet.http.HttpServletResponse;
 public class CalculatorServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp)   
             throws ServletException, IOException {
+        String waarde1 = req.getParameter("eerste_waarde");
+        String waarde2 = req.getParameter("twee_waarde");
+        String manier = req.getParameter("submit");
         
-        String action = req.getParameter("action");
-        String nr1 = req.getParameter("nr1");
-        String nr2 = req.getParameter("nr2"); 
+        double eersteWaarde = new Double(waarde1);
+        double tweedeWaarde = new Double(waarde1);
         
-        int nr1Con = Integer.parseInt(nr1);
-        int nr2Con = Integer.parseInt(nr2);
-        int answer = 0;
-        String operator = null;
-        
-		if("+".equals(action)) {
-        	answer = nr1Con + nr2Con;
-        	operator = "+";
+        double waarde = 0;
+        System.out.println(manier);
+        if (manier.equals('x')) {
+        	waarde = eersteWaarde * tweedeWaarde;
+        } else if (manier.equals('/')) {
+        	waarde = eersteWaarde / tweedeWaarde;
+        } else if (manier.equals('-')) {
+        	waarde = eersteWaarde - tweedeWaarde;
+        } else if (manier.equals('+')) {
+        	waarde = eersteWaarde + tweedeWaarde;
         }
-        
-        if("-".equals(action)) {
-        	answer = nr1Con - nr2Con;
-        	operator = "-";
-        }
-        
-        if("x".equals(action)) {
-        	answer = nr1Con * nr2Con;
-        	operator = "x";
-        }
-        
-        if(":".equals(action)) {
-        	answer = nr1Con / nr2Con;
-        	operator = ":";
-        }
+        	
         
         PrintWriter out = resp.getWriter();
         resp.setContentType("text/html");
-        
+
         out.println("<!DOCTYPE html>");
         out.println("<html>");
         out.println("  <title>Dynamic Example</title>");
         out.println("  <body>");
         out.println("    <h2>Dynamic webapplication example</h2>");
-        out.println("    <h2> The calculator calculated the following answer: " + answer);
-        
+        out.println("    <h2>Antwoord: " + waarde + "</h2>");
         out.println("  </body>");
-        out.println("</html>"); 
-        }
+        out.println("</html>");
+    }
 }
-
-

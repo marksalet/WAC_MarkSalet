@@ -2,19 +2,20 @@
 <html>
   <title>Dynamic Example</title>
   <body>
+  <a href="calculator.html">- Calculator</a><br>
+  <a href="storage.html">- Storage</a><br>
+  <a href="login.html">- Login</a><br>
+  <a href="weather.html">- Weather</a> (Je moet inloggen voor alle functies)<br><br>
+ 
     <form action="DynamicServlet.do" method="get">
       <div>
-        <input type="text" name="username" />
-        <input type="submit" value="Go!" />
+        <input type="text" name="eerste_waarde" placeholder="waarde 1" />
+        <input type="text" name="twee_waarde" placeholder="waarde 2" />   
+        <input type="submit" name="submit" value="+" />
+        <input type="submit" name="submit" value="-" />
+        <input type="submit" name="submit" value="x" />
+        <input type="submit" name="submit" value="/" />
       </div>
-    </form>
-    <form action="CalculatorServlet.do" method="get">
-    <input type="text" name="nr1"/>
-    <input type="text" name="nr2"/>
-     	<input name="action" type="submit" value="+" />
-      	<input name="action" type="submit" value="-" />
-      	<input name="action" type="submit" value="x" />
-       	<input name="action" type="submit" value=":" />
     </form>
   </body>
 </html>

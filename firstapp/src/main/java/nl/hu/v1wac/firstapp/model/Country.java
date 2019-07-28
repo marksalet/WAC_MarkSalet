@@ -7,13 +7,17 @@ public class Country {
 	private String capital;
 	private String continent;
 	private String region;
-	private double surface;
+	private int surface;
 	private int population;
 	private String government;
 	private double latitude;
 	private double longitude;
 	
-	public Country(String code, String iso3, String nm, String cap, String ct, String reg, double sur, int pop, String gov, double lat, double lng) {
+	public Country() {
+		
+	}
+	
+	public Country(String code, String iso3, String nm, String cap, String ct, String reg, int sur, int pop, String gov, double lat, double lng) {
 		this.code = code; 
 		this.iso3 = iso3;
 		this.name = nm;
@@ -51,7 +55,7 @@ public class Country {
 		return region;
 	}
 	
-	public double getSurface() {
+	public int getSurface() {
 		return surface;
 	}
 	
@@ -69,5 +73,25 @@ public class Country {
 	
 	public double getLongitude() {
 		return longitude;
+	}
+	
+	public void setCode(String code) {
+		this.code = code;
+	}
+	
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public void setCapital(String capital) {
+		this.capital= capital;
+	}
+	
+	public void setSurface(int surface) {
+		this.surface = surface;
+	}
+	
+	public void setPopulation(int population) {
+		this.population = population;
 	}
 }
